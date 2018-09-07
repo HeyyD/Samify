@@ -1,9 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const SongList = () => {
   return(
     <div>MOI</div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    songs: state.songs
+  };
+};
 
-export default SongList;
+export default connect(mapStateToProps)( SongList );
