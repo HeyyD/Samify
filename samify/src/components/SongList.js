@@ -4,10 +4,13 @@ import Song from './Song';
 
 const SongList = ({ songs }) => {
   console.log(songs);
+  const listStyle = {
+    width: '100%'
+  };
   return(
-    <ul>
+    <div style={listStyle}>
       {songs.map( s => <Song key={'song'+s.id}song={s} />)}
-    </ul>
+    </div>
   );
 };
 
