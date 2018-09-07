@@ -1,11 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import songReducer from './reducers/songsReducer';
 
 const reducer = combineReducers({
-  /*skills: skillsReducer,
-  projects: projectsReducer,
-  user: userReducer,
-  activeNavi: navReducer */
+  songs: songReducer
 });
 
 const store = createStore(
