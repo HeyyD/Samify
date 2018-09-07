@@ -1,11 +1,13 @@
 const testState = [
   {
+    id: 0,
     name: 'koiralaulu',
     artist: 'Loki',
     album: 'Lauluja koirasta',
     length: 120.00
   },
   {
+    id: 1,
     name: 'Give me food, bitch',
     artist: 'MC Loki',
     album: 'Ganksta\'s paradise',

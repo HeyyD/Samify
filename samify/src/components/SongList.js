@@ -1,11 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Song from './Song';
 
-const SongList = () => {
+const SongList = ({ songs }) => {
+  console.log(songs);
   return(
-    <div>MOI</div>
+    <ul>
+      {songs.map( s => <Song key={'song'+s.id}song={s} />)}
+    </ul>
   );
 };
+
 const mapStateToProps = (state) => {
   return {
     songs: state.songs
