@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="page-container">
           <Route path='/list' component={SongList} />
           <Route path='/login' component = { Login } />
         </div>
