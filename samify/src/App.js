@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './App.style.scss';
 import SongList from './components/SongList';
+import Login from './components/Login';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <Route path='/list' component={SongList} />
+        <div className="page-container">
+          <Route path='/login' component={ Login }/>
+          <Route path='/list' component={ SongList } />
         </div>
       </Router>
     );

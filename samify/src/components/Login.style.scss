@@ -1,0 +1,52 @@
+@import '../styles.scss';
+
+.login-form {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  .login-background {
+    background-image: url("../assets/background.png");
+    background-size: cover;
+    filter: blur(5px) brightness(0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .form-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: auto;
+    
+      input {
+        margin: $space-sm;
+      }
+
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: #444;
+        background: white;
+        border: solid 2px #444;
+        width: 30%;
+        margin: auto;
+        padding: $space-sm;
+
+        &:hover {
+          background: #888;
+          color: #111;
+          border: solid 2px #111;
+        }
+      }
+    }
+  }
+}
