@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.style.scss';
 import SongList from './components/SongList';
+import Login from './components/Login';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
       <Router>
         <div>
           <Route path='/list' component={SongList} />
+          <Route path='/login' component = { Login } />
         </div>
       </Router>
     );
