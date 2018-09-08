@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <Router>
         <div className="page-container">
-          <Route path='/list' component={SongList} />
-          <Route path='/login' component = { Login } />
+          <Route path='/login' component={ Login }/>
+          <Route path='/list' component={ SongList } />
         </div>
       </Router>
     );
