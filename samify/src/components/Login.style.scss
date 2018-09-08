@@ -1,19 +1,35 @@
 @import '../styles.scss';
 
-div {
+.login-form {
+  display: block;
   height: 100%;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  width: 500px;
+  width: 100%;
 
-  form {
-    display: flex;
-    flex-direction: column;
+  .login-background {
+    background-image: url("../assets/background.png");
+    background-size: cover;
+    filter: blur(5px) brightness(0.4);
+    height: 100%;
     width: 100%;
-  
-    input {
-      margin: $space-sm;
+    position: absolute;
+  }
+
+  .form-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: auto;
+    
+      input {
+        margin: $space-sm;
+      }
     }
   }
 }
