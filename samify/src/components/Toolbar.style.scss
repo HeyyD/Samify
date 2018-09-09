@@ -1,0 +1,10 @@
+@import '../styles.scss';
+
+.toolbar-container {
+  font-size: $font-size-lg;
+  padding: $space-md;
+
+  * {
+    display: block;
+  }
+}
