@@ -13,7 +13,7 @@ class Login extends Component {
             <h1>Welcome to Samify</h1>
             <input type="text" placeholder="Username"></input>
             <input type="password" placeholder="Password"></input>
-            <Link to="/list">Login</Link>
+            <Link className="button-style" to="/">Login</Link>
           </form>
         </div>
       </div>

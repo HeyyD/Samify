@@ -1,0 +1,14 @@
+@import '../styles.scss';
+
+.main-view-wrapper {
+  display: flex;
+  height: 100%;
+
+  .toolbar-wrapper {
+    border-right: 1px solid $color-gray-dark;
+  }
+
+  .content-wrapper {
+    flex: 1 1 auto;
+  }
+}

@@ -5,7 +5,6 @@ const Song = ({ song }) => {
     display: 'flex',
     padding: '0.5em',
     borderBottom: '1px solid grey',
-    width: '100%'
   };
   return(
     <div style={itemStyle}>

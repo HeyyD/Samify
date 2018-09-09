@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import SongList from './components/SongList';
 import Login from './components/Login';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import MainView from './components/MainView';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="page-container">
-          <Route path='/login' component={ Login }/>
-          <Route path='/list' component={ SongList } />
+          <Switch>
+            <Route path='/login' component={ Login }/>
+            <Route path='/' component={ MainView } />
+          </Switch>
         </div>
       </Router>
     );
