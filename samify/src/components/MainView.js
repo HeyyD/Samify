@@ -4,6 +4,7 @@ import SongList from './SongList';
 import Toolbar from './Toolbar';
 import './MainView.style.scss';
 import TestComponent from './TestComponent';
+import Player from './Player';
 
 class MainView extends Component {
 
@@ -22,7 +23,7 @@ class MainView extends Component {
           </div>
         </div>
         <div className="player-container">
-          <p>Player is working!</p>
+          <Player/>
         </div>
       </div>
     );
