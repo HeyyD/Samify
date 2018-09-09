@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Player.style.scss';
+import IconButton from './IconButton';
 
 class Player extends Component {
   render() {
     return(
       <div className="player-wrapper">
-        <i className="fa fa-step-backward"></i>
-        <i className="fa fa-play-circle-o"></i>
-        <i className="fa fa-step-forward"></i>
+        <IconButton icon="fa fa-step-backward"/>
+        <IconButton icon="fa fa-play-circle-o"/>
+        <IconButton icon="fa fa-step-forward"/>
       </div>
     );
   }
