@@ -7,7 +7,7 @@ class Player extends Component {
     return(
       <div className="player-wrapper">
         <IconButton icon="fa fa-step-backward"/>
-        <IconButton icon="fa fa-play-circle-o"/>
+        <IconButton size="50px" className="play-button" icon="fa fa-play-circle-o"/>
         <IconButton icon="fa fa-step-forward"/>
       </div>
     );

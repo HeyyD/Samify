@@ -9,7 +9,7 @@ class IconButton extends Component {
 
   render() {
     return(
-      <button className="icon-button" onClick={this.props.onClick}>
+      <button style={{ fontSize: this.props.size }} className="icon-button" onClick={this.props.onClick}>
         <i className={this.props.icon}></i>
       </button>
     );
