@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch } from 'react-router-dom';
+import { withRouter, Switch } from 'react-router-dom';
 import Toolbar from './Toolbar';
 import Player from './Player';
 import { connect } from 'react-redux';
@@ -41,4 +41,4 @@ const mapStateToProps = (state) => {
     view: state.view
   };
 };
-export default connect(mapStateToProps, { switchView })( MainView );
+export default withRouter(connect(mapStateToProps, { switchView })( MainView ));
