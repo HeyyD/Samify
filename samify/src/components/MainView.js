@@ -14,8 +14,8 @@ class MainView extends Component {
 
   render() {
     const { view } = this.props;
-    const visible = view === 'login';
-    const hideComponent = { display: visible ? 'none' : '' };
+    const visible = view === 'main';
+    const hideComponent = { display: visible ? '' : 'none' };
 
     return (
       <div className="main-view-wrapper" style={hideComponent}>
