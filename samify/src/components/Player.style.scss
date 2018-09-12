@@ -1,0 +1,12 @@
+@import '../styles.scss';
+
+.player-wrapper {
+  padding: $space-lg;
+  background: $color-gray-dark;
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: $space-lg;
+  }
+}

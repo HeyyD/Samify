@@ -1,0 +1,17 @@
+import React, { Component } from 'react';
+import './Player.style.scss';
+import IconButton from './IconButton';
+
+class Player extends Component {
+  render() {
+    return(
+      <div className="player-wrapper">
+        <IconButton size="20px" icon="fa fa-step-backward"/>
+        <IconButton size="50px" className="play-button" icon="fa fa-play-circle-o"/>
+        <IconButton size="20px" icon="fa fa-step-forward"/>
+      </div>
+    );
+  }
+}
+
+export default Player;
