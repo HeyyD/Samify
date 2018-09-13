@@ -2,6 +2,7 @@
 
 .artistWrapper {
   display: flex;
+  width: 100%;
 }
 img {
   border-radius: 2em;
@@ -13,6 +14,10 @@ h2 {
   color: #fff;
 }
 .popular {
-  width: 100%;
   padding: $space-lg;
+  width: 100%
+}
+.donationBar {
+  padding-top: $space-lg;
+  width: 20em;
 }
