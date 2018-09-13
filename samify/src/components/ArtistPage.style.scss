@@ -1,6 +1,18 @@
 @import '../styles.scss';
 
+.artistWrapper {
+  display: flex;
+}
 img {
   border-radius: 2em;
-  width: 20em;
+  width: $img-lg;
+  height: $img-lg;
+  flex: 0 1 auto;
+}
+h2 {
+  color: #fff;
+}
+.popular {
+  width: 100%;
+  padding: $space-lg;
 }

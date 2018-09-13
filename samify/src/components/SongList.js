@@ -10,7 +10,6 @@ const SongList = ({ songs }) => {
   return(
     <div style={listStyle}>
       {songs.map( s => <Song key={'song'+s.id}song={s} />)}
-      <h1>Lista</h1>
     </div>
   );
 };
