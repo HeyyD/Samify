@@ -1,0 +1,21 @@
+@import '../styles.scss';
+
+.album {
+  margin-top: $space-lg;
+}
+.albumImage {
+  border-radius: 1em;
+  width: $img-sm;
+  height: $img-sm;
+  flex: 0 1 auto;
+}
+.albumHeader {
+  display: flex;
+}
+.albumHeader h2 {
+  padding-left: $space-lg;
+  align-self: center;
+}
+.albumList {
+  margin-top: 1em;
+}

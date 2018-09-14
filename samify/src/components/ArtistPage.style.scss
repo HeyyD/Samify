@@ -14,9 +14,6 @@ img {
   height: $img-lg;
   flex: 0 1 auto;
 }
-h2 {
-  color: #fff;
-}
 .popular {
   padding: $space-lg;
   width: 100%
@@ -30,23 +27,4 @@ h2 {
   padding: $space-lg;
   padding-top: 0;
   width: 100%;
-}
-.album {
-  margin-top: $space-lg;
-}
-.albumImage {
-  border-radius: 1em;
-  width: $img-sm;
-  height: $img-sm;
-  flex: 0 1 auto;
-}
-.albumHeader {
-  display: flex;
-}
-.albumHeader h2 {
-  padding-left: $space-lg;
-  align-self: center;
-}
-.albumList {
-  margin-top: 1em;
 }

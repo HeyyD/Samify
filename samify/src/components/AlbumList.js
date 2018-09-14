@@ -1,5 +1,6 @@
 import React from 'react';
 import SongList from './SongList';
+import './AlbumList.style.scss';
 
 const AlbumList = () => {
   return(
