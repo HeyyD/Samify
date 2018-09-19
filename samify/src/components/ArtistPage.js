@@ -1,36 +1,36 @@
 import React from 'react';
 import SongList from './SongList';
 import AlbumList from './AlbumList';
-import { Line } from 'rc-progress';
+import ArtistDonation from './ArtistDonation';
+import { connect } from 'react-redux';
 import './ArtistPage.style.scss';
 
-const ArtistPage = () => {
+const ArtistPage = ({ artist }) => {
   return(
     <div>
       <div className='artistTop'>
         <img src='http://www.amiright.com/album-covers/images/album-Rick-Springfield-Working-Class-Dog.jpg' />
         <div className='popular'>
-          <h2>Loki</h2>
+          <h2>{artist.name}</h2>
           <SongList />
         </div>
       </div>
       <div className='artistBot'>
-        <div className='donationSection'>
-          <Line
-            percent="10"
-            strokeWidth="10"
-            trailWidth="10"
-            strokeColor="#2BC252"
-            trailColor="#928f8f" />
-          <div> Hello asdf asdf asdf asdf asdf asdf asdf asdf asdfas asdf </div>
-        </div>
+        <ArtistDonation artist={artist}/>
         <div className='albums'>
-          <AlbumList />
-          <AlbumList />
+          {artist.albums.map((album, i) => {
+            return <AlbumList key={album+i} album={album}/>;
+          })}
         </div>
       </div>
     </div>
   );
 };
 
-export default ArtistPage;
+const mapStateToProps = (state, props) => {
+  return {
+    artist: state.artists.find(a => a.id.toString() === props.id)
+  };
+};
+
+export default connect(mapStateToProps)( ArtistPage );

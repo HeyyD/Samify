@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <div className="page-container">
           <MainView>
-            <Route path='/artist' component={ ArtistPage } />
+            <Route path='/artist/:id' render={ ({ match }) => <ArtistPage id={match.params.id}/> } />
             <Route path="/list" component={ SongList }/>
             <Route path="/test" component={ TestComponent }/>
           </MainView>
