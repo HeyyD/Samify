@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import SongList from './SongList';
+import { withRouter, Switch } from 'react-router-dom';
 import Toolbar from './Toolbar';
-import './MainView.style.scss';
-import TestComponent from './TestComponent';
 import Player from './Player';
+import { connect } from 'react-redux';
+import { switchView } from '../reducers/viewReducer';
+import './MainView.style.scss';
 
 class MainView extends Component {
 
+  componentDidMount() {
+    this.props.switchView('main');
+  }
+
   render() {
+    const { view } = this.props;
+    const visible = view === 'main';
+    const hideComponent = { display: visible ? '' : 'none' };
+
     return (
-      <div className="main-view-wrapper">
+      <div className="main-view-wrapper" style={hideComponent}>
         <div className="upper-content-container">
           <div className="toolbar-wrapper">
             <Toolbar/>
           </div>
           <div className="content-wrapper">
             <Switch>
-              <Route path="/list" component={ SongList }/>
-              <Route path="/test" component={ TestComponent }/>
+              {this.props.children}
             </Switch>
           </div>
         </div>
@@ -29,5 +36,9 @@ class MainView extends Component {
     );
   }
 }
-
-export default MainView;
+const mapStateToProps = (state) => {
+  return {
+    view: state.view
+  };
+};
+export default withRouter(connect(mapStateToProps, { switchView })( MainView ));

@@ -1,0 +1,25 @@
+@import '../styles.scss';
+
+.artistTop {
+  display: flex;
+  width: 100%;
+}
+.artistBot {
+  display: flex;
+  width: 100%;
+}
+img {
+  border-radius: 2em;
+  width: $img-lg;
+  height: $img-lg;
+  flex: 0 1 auto;
+}
+.popular {
+  padding: $space-lg;
+  width: 100%
+}
+.albums {
+  padding: $space-lg;
+  padding-top: 0;
+  width: 100%;
+}

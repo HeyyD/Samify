@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { switchView } from '../reducers/viewReducer';
 import './Login.style.scss';
 
 class Login extends Component {
 
+  componentDidMount() {
+    this.props.switchView('login');
+  }
+
   render() {
+    const { view } = this.props;
+    const visible = view === 'login';
+    const hideComponent = { display: visible ? '' : 'none' };
+
     return (
-      <div className="login-form">
+      <div className="login-form" style={hideComponent}>
         <div className="login-background"></div>
         <div className="form-container">
           <form>
@@ -21,4 +31,10 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+  return {
+    view: state.view
+  };
+};
+
+export default connect(mapStateToProps, { switchView })( Login );
